@@ -1,3 +1,5 @@
-C_Sharp_Telerik_Homeworks
-=========================
-Telerik AcademyHomeWorks Repo
+WEB Projects and solutions
+
+================================
+
+HTML/CSS/JavaScript Repositories
