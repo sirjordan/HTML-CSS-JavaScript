@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="Styles.css" />
+        <script src="Script.js"></script>
+        <title>SliderApp</title>
+    </head>
+    <body onload="Items()">
+        <div id="itemsContainer">
+        </div>
+        <aside id="slideBar">
+            <form id="slideBarForm">
+                <fieldset>
+                    <legend>Min Price</legend>
+                    <input type="range" id="minPriceScroll"  min="0" max="3000"step="10" value="0" oninput="DisplayScrollBar(this,'minPrice'), Filter('minPriceScroll')" />
+                    <span id="minPrice">0</span><span> $</span>
+                </fieldset>
+                <fieldset>
+                    <legend>Max Price</legend>
+                    <input type="range" id="maxPriceScroll" min="100" max="3000" step="10" value="3000" oninput="DisplayScrollBar(this,'maxPrice'), Filter('maxPriceScroll')" />
+                    <span id="maxPrice">3000</span><span> $</span>
+                </fieldset>
+                <fieldset>
+                    <legend>Min Ram</legend>
+                    <input type="range" id="minRamScroll" min="1" max="32"step="1" value="0" oninput="DisplayScrollBar(this,'minRam'), Filter('minRamScroll')"/>
+                    <span id="minRam">0</span><span> GB</span>
+                </fieldset>
+                <fieldset>
+                    <legend>Max Ram</legend>
+                    <input type="range" id="maxRamScroll" min="2" max="32"step="2" value="32" oninput="DisplayScrollBar(this,'maxRam'), Filter('maxRamScroll')"/>
+                    <span id="maxRam">32</span><span> GB</span>
+                </fieldset>
+            </form>
+        </aside>
+        
+        
+    </body>
+</html>
