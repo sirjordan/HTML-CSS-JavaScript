@@ -1,0 +1,38 @@
+body{
+    margin:10px;  
+}
+
+#itemsContainer{
+    width:600px;
+    height:600px;
+    position:relative;
+    border: 1px solid grey;
+    float: left;
+    font-size: 12px;
+    text-align:center;
+}
+
+#itemsContainer img{
+    width:150px;
+    height:150px;
+}
+
+#itemsContainer table{
+        width : 30%;
+        height : 200px;
+        position :relative;
+        float:left;
+        border: 1px dotted green;
+        margin:2px;
+}
+
+#itemsContainer table:hover{
+    border: 1px solid green;
+}
+
+#slideBar{
+    float: left;
+    left: 20px;
+    position: relative;
+    width: 280px;
+}
