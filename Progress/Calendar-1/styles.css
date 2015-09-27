@@ -1,0 +1,66 @@
+.calendar .content{
+	background-color: #FFFF99;
+	border:1px solid lightgrey;
+}
+.calendar .content th{
+	font-style: italic;
+	font-weight: normal;
+	background-color: #FFFF99;
+}
+.calendar .content tbody tr:nth-child(odd){
+	background-color: lightgrey;
+}
+.calendar .content tbody td{
+	width: 80px;
+	vertical-align: top;
+	border-right: 1px solid white;
+	height: 40px;
+ }
+.calendar .content tbody td:hover{
+	background-color: white;
+}
+.calendar .content .note {
+	color:green;
+	font-style: italic;
+	background-color: white;
+	border-radius: 4px;
+	padding: 2px;
+	margin-bottom: 2px;
+}
+
+.calendar .showed{
+	display: block;
+}
+.calendar .hidden{
+	display: none;
+}
+
+.calendar .clicked{
+	background-color: #FFCC33;
+}
+.calendar .editTextbox{
+	width: 60px;
+	display: block;
+	position: absolute;
+}
+
+.showNotes:hover{
+	color:green;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/*Footer element*/
+#showAllNotes, #notesCounter, .showNotes{
+	font-size: small;
+	font-style: italic;
+}
+#showAllNotes{
+	float: left;
+}
+#notesCounter{
+	float: right;
+}
+
+
+
