@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    margin-top: 60px;
+    padding: 10px;
+}
+img {
+    width: 160px;
+    height: 90px;
+}
+.topMenu{
+    position: fixed;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background-color: cadetblue;
+}
+.clickedBtn{
+    border: 1px solid black;: lightblue;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: none;
+}
+.unclickedBtn{
+    border-radius: 3px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+#dropDownBtn{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 20px;
+    background-color: lightblue;
+    padding: 5px;
+    cursor: pointer;
+    font-style: italic;
+}
+#dropDownBtn:hover{
+    background-color: white;
+}
+#dropDown{
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 20px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+#dropDown li{
+    padding:5px;
+    font-style: italic;
+    border-left: 1px solid;
+}
+#dropDown li:hover{
+    background-color: white;
+}
