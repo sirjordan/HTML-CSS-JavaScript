@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .listItem{
+            cursor: pointer;
+        }
+
+        .hiddenListItem{
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div id="myList">
+        <div id="searchBox">
+            <input type="text" oninput="onTyping(this.value)" />
+        </div>
+        <div id="myContent">
+        </div>
+    </div>
+</head>
+<body>
+    <script type="text/javascript">
+        function onElementClick() {
+            var el = this;
+            console.log(el['bankId']);
+
+            window.location.href = 'http://somewhere?bankId=' + el['bankId'];
+        };
+
+        function onTyping(text) {
+            var listItems = document.querySelectorAll("#myContent")[0].children;
+            console.log(text);
+
+            for (let i = 0; i < listItems.length; i++) {
+                let domEl = listItems[i];
+                if (domEl['bankTitle'].toLowerCase().includes(text.toLowerCase())) {
+                    domEl.classList.remove('hiddenListItem');
+                }else{
+                    domEl.classList.add('hiddenListItem');
+                }
+            };
+        };
+
+        function bindList(data){
+            var wrapper = document.querySelectorAll("#myContent")[0];
+            for (let i = 0; i < data.length; i++) {
+                let el = data[i];
+
+                let domEl = document.createElement("p");
+                domEl.onclick = onElementClick;
+                domEl.innerHTML = el.title;
+                domEl.className = 'listItem';
+                domEl['bankId'] = el.id;
+                domEl['bankTitle'] = el.title;
+
+                wrapper.appendChild(domEl);
+            };
+        };
+
+        let data = [
+            { title: "Bank 1", id: 1 },
+            { title: "abcd", id: 2 },
+            { title: "xyz", id: 3 }
+        ];
+        window.onload = bindList(data);
+    </script>
+
+</body>
+</html>
